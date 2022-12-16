@@ -16,6 +16,7 @@ for color in range(4, 35):
 
 donatello = Turtle()
 donatello.speed(5)
+donatello.hideturtle()
 
 screen = Screen()
 screen.colormode(255)
@@ -30,6 +31,5 @@ for turtle in range(0, 10):
         donatello.penup()
         donatello.forward(50)
         
-donatello.hideturtle()
 screen.title("Edward's Digital Spot Painting")
 screen.exitonclick()
