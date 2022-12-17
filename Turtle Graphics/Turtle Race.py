@@ -7,7 +7,6 @@ screen = Screen()
 screen.setup(width=800, height=500)
 screen.title("The Teenage Mutant Ninja Turtle Race")
 
-speeds = [5, 10, 15, 20]
 colors = ['blue', 'purple', 'red', 'orange']
 y_axis = [-100, -50, 0, 50]
 x_axis = -390
