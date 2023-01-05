@@ -4,6 +4,7 @@ from food import Food
 from scoreboard import Scoreboard
 import time
 
+
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor('black')
@@ -31,16 +32,15 @@ while moving_forward:
         score.keep_score()
         snake.increase_tail()
         
-        
-
     if snake.head.xcor() > 290 or snake.head.xcor() < -300 or snake.head.ycor() > 300 or snake.head.ycor() < -290:
         moving_forward = False
+        score.keep_highscore()
         score.gameover()
 
     for each_snake in snake.snake_list[1:]:
         if snake.head.distance(each_snake) < 10:
+            score.keep_highscore()
             moving_forward = False
             score.gameover()
-
-
+            
 screen.exitonclick()
