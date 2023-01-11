@@ -23,6 +23,10 @@ while len(guessed_states) < 50:
         messagebox.showinfo(title="GAME OVER", message=f"You've missed a few states: {missing_states}")
         break
 
+    if len(guessed_states) == 50:
+        messagebox.showinfo(title="YOU WIN!", message="CONGRATULATIONS! YOU HAVE GUESSED ALL 50 STATES!")
+        break
+
     elif state_answer in list_of_states:
         turtle = Turtle()
         turtle.hideturtle()
@@ -31,7 +35,4 @@ while len(guessed_states) < 50:
         turtle.goto(x=float(choosen_state.x), y=float(choosen_state.y))
         turtle.write(choosen_state.state.item(), align='left', font=('Arial', 8, 'normal'))
         guessed_states.append(state_answer)
-
-if len(guessed_states) == 50:
-    messagebox.showinfo(title="YOU WIN!", message="CONGRATULATIONS! YOU HAVE GUESSED ALL 50 STATES!")
 
